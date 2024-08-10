@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="feature-mobilenotifications.androidlib">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/mobilenotifications.androidlib/build/intermediates/merged_java_res/release/feature-mobilenotifications.androidlib.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

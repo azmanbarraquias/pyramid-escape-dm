@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="feature-unityLibrary">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/merged_java_res/release/feature-unityLibrary.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
