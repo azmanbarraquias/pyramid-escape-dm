@@ -9,7 +9,11 @@ EditorBuildSettings:
     path: Assets/_Scenes/Menu.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
+<<<<<<< Updated upstream
     path: Assets/_Scenes/GameScene.unity
+=======
+    path: Assets/_Scenes/Block_1.unity
+>>>>>>> Stashed changes
     guid: 41f6fc1c207618e49a4b35a65201e636
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 0789386c9661621459e8a8fd695dc0f0, type: 2}
