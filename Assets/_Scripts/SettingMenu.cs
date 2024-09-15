@@ -40,6 +40,10 @@ public class SettingMenu : MonoBehaviour
         audioMixer.SetFloat("MainVolume", volume);
     }
 
+    public void OpenCloseAchievement(){
+        AchievementManager.Instance.OpenCloseAchievement();
+    }
+
     #region Screen Resolution
     private void SetupScreenResolution()
     {

@@ -11,10 +11,10 @@ public class SceneTransition : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1))
-        {
-            FadeToLevel(1);
-        }
+        // if (Input.GetKeyDown(KeyCode.Alpha1))
+        // {
+        //     FadeToLevel(1);
+        // }
     }
 
     public void FadeToLevel(int levelIndex)
