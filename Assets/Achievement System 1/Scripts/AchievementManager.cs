@@ -58,7 +58,7 @@ public class AchievementManager : MonoBehaviour
     {
         SelectGeneral();
 
-        achievementMenu.SetActive(true);
+        // achievementMenu.SetActive(true);
 
         GenerateAchievement();
     }
