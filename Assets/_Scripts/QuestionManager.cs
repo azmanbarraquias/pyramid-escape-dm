@@ -19,6 +19,9 @@ public class QuestionManager : MonoBehaviour
     public TextMeshProUGUI answerCTMP;
     public TextMeshProUGUI answerDTMP;
 
+    public GameObject answerC;
+    public GameObject answerD;
+
 
     [Header("AnswerAnim")]
     // public Animator answer;
@@ -32,6 +35,8 @@ public class QuestionManager : MonoBehaviour
     // store the ununansweredQuestions.
     // Static so that when we reload the next scene it will remember the questions...
     private List<QuestionItem> unansweredQuestions;
+
+    private List<QuestionItem> answeredQuestion;
 
     private QuestionItem currentQuestion; //this will store question after get the random question
 
@@ -58,8 +63,9 @@ public class QuestionManager : MonoBehaviour
 
     #endregion
 
-    private void Start() {
-         StartGame();
+    private void Start()
+    {
+        StartGame();
     }
 
     public void StartGame()
@@ -86,7 +92,7 @@ public class QuestionManager : MonoBehaviour
 
         // Get the random question index from list from unansweredQuestions
         int randomQuestionIndex = Random.Range(0, unansweredQuestions.Count);
-     
+
         // lets select the question base on index
         currentQuestion = unansweredQuestions[randomQuestionIndex];
 
@@ -105,25 +111,45 @@ public class QuestionManager : MonoBehaviour
         questionText.text = currentQuestion.question;
 
         // questionImage.sprite = currentQuestion.images;
-        answerATMP.text = currentQuestion.answers[0].answerText;
-        answerBTMP.text = currentQuestion.answers[1].answerText;
-        answerCTMP.text = currentQuestion.answers[2].answerText;
-        answerDTMP.text = currentQuestion.answers[3].answerText;
+        if (currentQuestion.answers.Count == 4)
+        {
+
+            Debug.Log("4. " + currentQuestion.answers.Count);
+            answerC.SetActive(true);
+            answerD.SetActive(true);
+            answerATMP.text = currentQuestion.answers[0].answerText;
+            answerBTMP.text = currentQuestion.answers[1].answerText;
+            answerCTMP.text = currentQuestion.answers[2].answerText;
+            answerDTMP.text = currentQuestion.answers[3].answerText;
+
+        }
+        else
+        {
+            Debug.Log("2. " + currentQuestion.answers.Count);
+            answerC.SetActive(false);
+            answerD.SetActive(false);
+            answerATMP.text = currentQuestion.answers[0].answerText;
+            answerBTMP.text = currentQuestion.answers[1].answerText;
+        }
+
+
+
 
     }
     #endregion
 
     #region Buttons
-    public void SelectButton(int index) {
-         if (currentQuestion.answers[index].isCorrectAnswer)
+    public void SelectButton(int index)
+    {
+        if (currentQuestion.answers[index].isCorrectAnswer)
         {
-        //     total++;
+            //     total++;
 
-        //     aSource.Stop();
-        //     aSource.clip = correctSound;
-        //     aSource.Play();
-        //     answer.SetTrigger("Correct");
-        Debug.Log("Correct");
+            //     aSource.Stop();
+            //     aSource.clip = correctSound;
+            //     aSource.Play();
+            //     answer.SetTrigger("Correct");
+            Debug.Log("Correct");
         }
         else
         {
@@ -135,7 +161,7 @@ public class QuestionManager : MonoBehaviour
             // {
             //     // correctImgAnswer.sprite = currentQuestion.correctIMG;
             // }
-             Debug.Log("Wrong");
+            Debug.Log("Wrong");
         }
         GetNextQuestion();
     }
