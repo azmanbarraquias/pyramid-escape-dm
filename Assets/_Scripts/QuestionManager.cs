@@ -10,7 +10,7 @@ public class QuestionManager : MonoBehaviour
     #region Variables
     [Header("Text Game Object")]
     // public TextMeshProUGUI questionNoInfo;
-    // public TextMeshProUGUI scoreText;
+    public TextMeshProUGUI scoreText;
     [Space]
     // public Image questionImage;
     public TextMeshProUGUI questionText;
@@ -49,11 +49,11 @@ public class QuestionManager : MonoBehaviour
 
     public GameObject asnweredHistoryTemplate;
 
-    public GameObject asnweredHistoryHolder;
+    public Transform asnweredHistoryHolder;
 
 
-    // int total = 0;
-    // string result;
+    int total = 0;
+    string result;
     // string ans;
     // public Image correctImgAnswer;
 
@@ -153,7 +153,7 @@ public class QuestionManager : MonoBehaviour
         answeredHistory.Add(index);
         if (currentQuestion.answers[index].isCorrectAnswer)
         {
-            //     total++;
+                total++;
 
             //     aSource.Stop();
             //     aSource.clip = correctSound;
@@ -190,35 +190,35 @@ public class QuestionManager : MonoBehaviour
             // aSource.clip = finishSound;
             // aSource.Play();
 
-            // if (total == questions.Length)
-            // {
-            //     // AchievementManager.Instance.UnlockAchievement(achievementName);
-            //     result = "PERFECT !!!";
-            // }
-            // else if (total >= (questions.Length / 2))
-            // {
-            //     result = "GOOD JOB";
-            // }
-            // else
-            // {
-            //     result = "NICE TRY";
-            // }
-            // scoreText.text = "YOUR SCORE IS " + total.ToString() + " OUT OF " + questions.Length + "  " + result;
+            if (total == questions.Length)
+            {
+                // AchievementManager.Instance.UnlockAchievement(achievementName);
+                result = "PERFECT !!!";
+            }
+            else if (total > (questions.Length / 2))
+            {
+                result = "GOOD JOB";
+            }
+            else
+            {
+                result = "NICE TRY";
+            }
+            scoreText.text = "YOUR SCORE IS " + total.ToString() + " OUT OF " + questions.Length + "  " + result;
             endGamePanel.SetActive(true);
             for (int i = 0; i < answeredQuestionistory.Count; i++)
             
             {
                 var current = answeredQuestionistory[i];
 
+                   GameObject asn = Instantiate(asnweredHistoryTemplate, asnweredHistoryHolder);   
 
 
-               var asn =     Instantiate(asnweredHistoryTemplate, asnweredHistoryHolder.transform.position, Quaternion.identity);
-
-                  asnweredHistoryTemplate.transform.SetParent(asnweredHistoryHolder.transform);
                 //   asnweredHistoryTemplate.transform.localScale = new Vector3(1, 1, 1);
 
+                var index = current.answers[answeredHistory[i]];
+
                 asn.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = answeredQuestionistory[i].question;
-                asn.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = (current.answers[answeredHistory[i]].isCorrectAnswer == true).ToString();
+                asn.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = $"{answeredHistory[i]} = {current.answers[answeredHistory[i]].isCorrectAnswer == true}";
             
 
             }
