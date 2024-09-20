@@ -36,7 +36,9 @@ public class QuestionManager : MonoBehaviour
     // Static so that when we reload the next scene it will remember the questions...
     private List<QuestionItem> unansweredQuestions;
 
-    private List<QuestionItem> answeredQuestion;
+    private List<QuestionItem> answeredQuestionistory = new List<QuestionItem>();
+
+    private List<int> answeredHistory = new();
 
     private QuestionItem currentQuestion; //this will store question after get the random question
 
@@ -44,6 +46,11 @@ public class QuestionManager : MonoBehaviour
     private int currentNoQestion;
 
     private int currentQuestionIndex;
+
+    public GameObject asnweredHistoryTemplate;
+
+    public GameObject asnweredHistoryHolder;
+
 
     // int total = 0;
     // string result;
@@ -96,6 +103,8 @@ public class QuestionManager : MonoBehaviour
         // lets select the question base on index
         currentQuestion = unansweredQuestions[randomQuestionIndex];
 
+        answeredQuestionistory.Add(currentQuestion);
+
         // remove question after set that current question from unansweredQuestion list
         unansweredQuestions.RemoveAt(randomQuestionIndex);
 
@@ -141,6 +150,7 @@ public class QuestionManager : MonoBehaviour
     #region Buttons
     public void SelectButton(int index)
     {
+        answeredHistory.Add(index);
         if (currentQuestion.answers[index].isCorrectAnswer)
         {
             //     total++;
@@ -149,7 +159,7 @@ public class QuestionManager : MonoBehaviour
             //     aSource.clip = correctSound;
             //     aSource.Play();
             //     answer.SetTrigger("Correct");
-            Debug.Log("Correct");
+            // Debug.Log("Correct");
         }
         else
         {
@@ -161,7 +171,7 @@ public class QuestionManager : MonoBehaviour
             // {
             //     // correctImgAnswer.sprite = currentQuestion.correctIMG;
             // }
-            Debug.Log("Wrong");
+            // Debug.Log("Wrong");
         }
         GetNextQuestion();
     }
@@ -195,6 +205,23 @@ public class QuestionManager : MonoBehaviour
             // }
             // scoreText.text = "YOUR SCORE IS " + total.ToString() + " OUT OF " + questions.Length + "  " + result;
             endGamePanel.SetActive(true);
+            for (int i = 0; i < answeredQuestionistory.Count; i++)
+            
+            {
+                var current = answeredQuestionistory[i];
+
+
+
+               var asn =     Instantiate(asnweredHistoryTemplate, asnweredHistoryHolder.transform.position, Quaternion.identity);
+
+                  asnweredHistoryTemplate.transform.SetParent(asnweredHistoryHolder.transform);
+                //   asnweredHistoryTemplate.transform.localScale = new Vector3(1, 1, 1);
+
+                asn.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = answeredQuestionistory[i].question;
+                asn.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = (current.answers[answeredHistory[i]].isCorrectAnswer == true).ToString();
+            
+
+            }
         }
         else
         {
