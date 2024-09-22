@@ -3342,6 +3342,7 @@ MonoBehaviour:
   progressText: {fileID: 1601246045}
   useCustomLoading: 1
   timer: 5
+  animator: {fileID: 0}
 --- !u!114 &1346171111
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3366,7 +3367,7 @@ MonoBehaviour:
   questions:
   - question: Which of the following statement is a proposition?
     answers:
-    - isCorrectAnswer: 0
+    - isCorrectAnswer: 1
       answerText: Get me a glass of milkshake
     - isCorrectAnswer: 0
       answerText: God bless you!
@@ -3376,7 +3377,7 @@ MonoBehaviour:
       answerText: The only odd prime number is 2
   - question: "The truth value of \u20184+3=7 or 5 is not prime\u2019."
     answers:
-    - isCorrectAnswer: 0
+    - isCorrectAnswer: 1
       answerText: False
     - isCorrectAnswer: 1
       answerText: True
@@ -3393,7 +3394,7 @@ MonoBehaviour:
   - question: What is the value of x after this statement, assuming the initial value
       of x is 5?
     answers:
-    - isCorrectAnswer: 0
+    - isCorrectAnswer: 1
       answerText: 1
     - isCorrectAnswer: 0
       answerText: 3
@@ -3414,6 +3415,8 @@ MonoBehaviour:
       answerText: I love cricket
   asnweredHistoryTemplate: {fileID: 262299601187533773, guid: 420194c4c23b8674eb08de3873890fbe, type: 3}
   asnweredHistoryHolder: {fileID: 1011835595}
+  Level: 1
+  nextLevelBtn: {fileID: 1533178221}
 --- !u!1 &1354296181
 GameObject:
   m_ObjectHideFlags: 0
@@ -4049,7 +4052,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1533178222
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4114,9 +4117,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1346171110}
-        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
-        m_MethodName: LoadSceneIndex
+      - m_Target: {fileID: 1346171111}
+        m_TargetAssemblyTypeName: QuestionManager, Assembly-CSharp
+        m_MethodName: LoadSceneIndexF
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5446,7 +5449,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1346171110}
         m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
-        m_MethodName: LoadSceneIndex
+        m_MethodName: LoadSceneIndexF
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

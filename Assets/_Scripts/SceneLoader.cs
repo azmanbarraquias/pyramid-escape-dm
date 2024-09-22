@@ -29,12 +29,20 @@ public class SceneLoader : MonoBehaviour
 	private float startTime = 0;
 	private int sceneIndex;
 
+	public Animator animator;
+
 	#endregion  My Variable's
 
 	private void Start()
 	{
 		Time.timeScale = 1f;
 	}
+
+	public void LoadSceneIndexF(int sceneIndex)
+	{
+		  SceneManager.LoadScene(sceneIndex);
+	}
+
 	public void LoadSceneIndex(int sceneIndex)
 	{
 		menuScreen.SetActive(false); // Set Menu Panel Active = false
@@ -47,16 +55,16 @@ public class SceneLoader : MonoBehaviour
 		{
 			// int for index, string for scene name
 			if (isLoadSceneStarted == false)
-			{ 
-				StartCoroutine(LoadAsynchronously(sceneIndex)); 
+			{
+				StartCoroutine(LoadAsynchronously(sceneIndex));
 			}
 			else
-			{ 
-				Debug.Log("Load scene is already started. . ."); 
+			{
+				Debug.Log("Load scene is already started. . .");
 			}
 		}
 	}
-	
+
 	private void CustomLoadSceneLoader(int index)
 	{
 		sceneIndex = index;

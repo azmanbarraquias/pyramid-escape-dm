@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class QuestionManager : MonoBehaviour
@@ -51,6 +52,10 @@ public class QuestionManager : MonoBehaviour
 
     public Transform asnweredHistoryHolder;
 
+    public int Level;
+
+    public GameObject nextLevelBtn;
+
 
     int total = 0;
     string result;
@@ -84,6 +89,11 @@ public class QuestionManager : MonoBehaviour
     {
         // correctImgAnswer.sprite = currentQuestion.correctIMG;
     }
+
+    public void LoadSceneIndexF(int sceneIndex)
+	{
+		  SceneManager.LoadScene(sceneIndex);
+	}
 
     #region GetRandomQuestionMethod
     void GetRandomQuestion()
@@ -194,14 +204,20 @@ public class QuestionManager : MonoBehaviour
             {
                 // AchievementManager.Instance.UnlockAchievement(achievementName);
                 result = "PERFECT !!!";
+                   nextLevelBtn.SetActive(true);
+                  PlayerPrefs.SetInt(PlayerPrefsID.pyLevel, ++Level);
             }
             else if (total > (questions.Length / 2))
             {
                 result = "GOOD JOB";
+                nextLevelBtn.SetActive(true);
+                  PlayerPrefs.SetInt(PlayerPrefsID.pyLevel, ++Level);
             }
             else
             {
                 result = "NICE TRY";
+              
+
             }
             scoreText.text = "YOUR SCORE IS " + total.ToString() + " OUT OF " + questions.Length + "  " + result;
             endGamePanel.SetActive(true);
