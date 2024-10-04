@@ -50,6 +50,8 @@ public class QuestionManager : MonoBehaviour
 
     public GameObject asnweredHistoryTemplate;
 
+    public GameObject asnwerTemplate;
+
     public Transform asnweredHistoryHolder;
 
     public int Level;
@@ -91,9 +93,9 @@ public class QuestionManager : MonoBehaviour
     }
 
     public void LoadSceneIndexF(int sceneIndex)
-	{
-		  SceneManager.LoadScene(sceneIndex);
-	}
+    {
+        SceneManager.LoadScene(sceneIndex);
+    }
 
     #region GetRandomQuestionMethod
     void GetRandomQuestion()
@@ -163,7 +165,7 @@ public class QuestionManager : MonoBehaviour
         answeredHistory.Add(index);
         if (currentQuestion.answers[index].isCorrectAnswer)
         {
-                total++;
+            total++;
 
             //     aSource.Stop();
             //     aSource.clip = correctSound;
@@ -204,38 +206,45 @@ public class QuestionManager : MonoBehaviour
             {
                 // AchievementManager.Instance.UnlockAchievement(achievementName);
                 result = "PERFECT !!!";
-                   nextLevelBtn.SetActive(true);
-                  PlayerPrefs.SetInt(PlayerPrefsID.pyLevel, ++Level);
+                nextLevelBtn.SetActive(true);
+                PlayerPrefs.SetInt(PlayerPrefsID.pyLevel, ++Level);
             }
             else if (total > (questions.Length / 2))
             {
                 result = "GOOD JOB";
                 nextLevelBtn.SetActive(true);
-                  PlayerPrefs.SetInt(PlayerPrefsID.pyLevel, ++Level);
+                PlayerPrefs.SetInt(PlayerPrefsID.pyLevel, ++Level);
             }
             else
             {
                 result = "NICE TRY";
-              
+
 
             }
             scoreText.text = "YOUR SCORE IS " + total.ToString() + " OUT OF " + questions.Length + "  " + result;
             endGamePanel.SetActive(true);
             for (int i = 0; i < answeredQuestionistory.Count; i++)
-            
+
             {
                 var current = answeredQuestionistory[i];
 
-                   GameObject asn = Instantiate(asnweredHistoryTemplate, asnweredHistoryHolder);   
+                GameObject asnQuestion = Instantiate(asnweredHistoryTemplate, asnweredHistoryHolder);
 
 
-                //   asnweredHistoryTemplate.transform.localScale = new Vector3(1, 1, 1);
+                for (int j = 0; j < answeredQuestionistory[i].answers.Count; j++)
+                {
+                    var index = current.answers[answeredHistory[i]];
 
-                var index = current.answers[answeredHistory[i]];
+                    GameObject asn = Instantiate(asnwerTemplate, asnQuestion.transform);
+                    //  asn.transform.GetComponent<TextMeshProUGUI>().text = $"{answeredQuestionistory[i].answers[j]} = {current.answers[answeredHistory[i]].isCorrectAnswer == true}";
 
-                asn.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = answeredQuestionistory[i].question;
-                asn.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = $"{answeredHistory[i]} = {current.answers[answeredHistory[i]].isCorrectAnswer == true}";
-            
+                    asn.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = $"{answeredQuestionistory[i].answers[j].answerText} = {j == answeredHistory[i]}";
+
+                }
+
+                asnQuestion.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text =  $"  Question{i + 1}:";
+                asnQuestion.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = answeredQuestionistory[i].question;
+
 
             }
         }
