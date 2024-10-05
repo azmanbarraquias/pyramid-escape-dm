@@ -29,6 +29,7 @@ public class QuestionManager : MonoBehaviour
 
     [Header("FinishGameUI")]
     public GameObject endGamePanel;
+        public GameObject mainGame;
 
     [Header("Number of Question")]
     public QuestionItem[] questions;
@@ -57,6 +58,11 @@ public class QuestionManager : MonoBehaviour
     public int Level;
 
     public GameObject nextLevelBtn;
+
+    public Color correctColor;
+
+    public Color wrongColor;
+
 
 
     int total = 0;
@@ -223,27 +229,44 @@ public class QuestionManager : MonoBehaviour
             }
             scoreText.text = "YOUR SCORE IS " + total.ToString() + " OUT OF " + questions.Length + "  " + result;
             endGamePanel.SetActive(true);
+            mainGame.SetActive(false);
             for (int i = 0; i < answeredQuestionistory.Count; i++)
 
             {
                 var current = answeredQuestionistory[i];
 
                 GameObject asnQuestion = Instantiate(asnweredHistoryTemplate, asnweredHistoryHolder);
+                var asnwersH = current.answers[answeredHistory[i]];
 
 
                 for (int j = 0; j < answeredQuestionistory[i].answers.Count; j++)
                 {
-                    var index = current.answers[answeredHistory[i]];
 
                     GameObject asn = Instantiate(asnwerTemplate, asnQuestion.transform);
                     //  asn.transform.GetComponent<TextMeshProUGUI>().text = $"{answeredQuestionistory[i].answers[j]} = {current.answers[answeredHistory[i]].isCorrectAnswer == true}";
 
-                    asn.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = $"{answeredQuestionistory[i].answers[j].answerText} = {j == answeredHistory[i]}";
+                    asn.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = $"{answeredQuestionistory[i].answers[j].answerText} = {answeredQuestionistory[i].answers[j].isCorrectAnswer}";
+                    if (answeredHistory[i] == j)
+                    {
+                        asn.transform.GetChild(3).gameObject.SetActive(true);
+                        if (current.answers[answeredHistory[i]].isCorrectAnswer)
+                        {
+                            asn.transform.GetChild(1).gameObject.SetActive(true);
+                             asn.GetComponent<Image>().color = correctColor;
+                        }
+                        else
+                        {
+                            asn.transform.GetChild(2).gameObject.SetActive(true);
+                             asn.GetComponent<Image>().color = wrongColor;
+                        }
+                    }
+
 
                 }
 
-                asnQuestion.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text =  $"  Question{i + 1}:";
+                asnQuestion.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = $"  Question{i + 1}:";
                 asnQuestion.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = answeredQuestionistory[i].question;
+
 
 
             }
