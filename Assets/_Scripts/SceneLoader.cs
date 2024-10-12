@@ -42,7 +42,11 @@ public class SceneLoader : MonoBehaviour
 	{
 		  SceneManager.LoadScene(sceneIndex);
 	}
-
+	
+	public void ResetAchievement(){
+		AchievementManager.Instance.ResetAchievement();
+	}
+	
 	public void LoadSceneIndex(int sceneIndex)
 	{
 		menuScreen.SetActive(false); // Set Menu Panel Active = false

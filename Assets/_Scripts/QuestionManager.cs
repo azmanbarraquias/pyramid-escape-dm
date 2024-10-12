@@ -12,6 +12,10 @@ public class QuestionManager : MonoBehaviour
     [Header("Text Game Object")]
     // public TextMeshProUGUI questionNoInfo;
     public TextMeshProUGUI scoreText;
+    public TextMeshProUGUI scoreTextAns;
+
+      public GameObject unlockBtn;
+
     [Space]
     // public Image questionImage;
     public TextMeshProUGUI questionText;
@@ -63,7 +67,7 @@ public class QuestionManager : MonoBehaviour
 
     public Color wrongColor;
 
-
+    public string unlockTitle;
 
     int total = 0;
     string result;
@@ -214,16 +218,22 @@ public class QuestionManager : MonoBehaviour
                 result = "PERFECT !!!";
                 nextLevelBtn.SetActive(true);
                 PlayerPrefs.SetInt(PlayerPrefsID.pyLevel, ++Level);
+                scoreTextAns.text = "Score  " + total.ToString() + " OUT OF " + questions.Length + "\n" + "PASSED";
+                 AchievementManager.Instance.EarnAchievement(unlockTitle);
             }
             else if (total > (questions.Length / 2))
             {
                 result = "GOOD JOB";
                 nextLevelBtn.SetActive(true);
                 PlayerPrefs.SetInt(PlayerPrefsID.pyLevel, ++Level);
+                  scoreTextAns.text = "Score: " + total.ToString() + " OUT OF " + questions.Length + "\n" + "PASSED";
+                   AchievementManager.Instance.EarnAchievement(unlockTitle);
             }
             else
             {
                 result = "NICE TRY";
+                scoreTextAns.text = "Score " + total.ToString() + " OUT OF " + questions.Length + "\n" + "FAILED";
+                    nextLevelBtn.SetActive(false);
 
 
             }
