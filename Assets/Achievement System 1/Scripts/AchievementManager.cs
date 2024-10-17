@@ -112,7 +112,8 @@ public class AchievementManager : MonoBehaviour
     public void CreateAchievement(Transform parent, string title, string description, Sprite icon, int point, string[] dependencies = null)
     {
         var achievementPref = Instantiate(achievementTemplate);
-        achievementPref.transform.localScale = new Vector3(1, 1, 1);
+        // achievementPref.transform.localScale = new Vector3(1, 1, 1);
+
 
         Achievement newAchievement = new Achievement(title, description, icon, point, achievementPref);
 
@@ -133,6 +134,12 @@ public class AchievementManager : MonoBehaviour
                 // NewAchiivement = Press W --> depend on Press Space
             }
         }
+
+        achievementPref.transform.localPosition = new Vector3(
+        achievementPref.transform.localPosition.x,
+        achievementPref.transform.localPosition.y,
+        0
+    );
     }
 
     public void SetAchievementInfo(Transform parent, GameObject achievementPref, string title)
