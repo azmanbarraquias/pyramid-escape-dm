@@ -9,6 +9,7 @@ public class AchievementManager : MonoBehaviour
     #region Variable 
     [Header("Achievement Manager")]
     public GameObject achievementMenu;
+        public GameObject puzzleView;
 
     [Header("Achievement Prefabs")]
     public GameObject achievementTemplate;
@@ -28,6 +29,8 @@ public class AchievementManager : MonoBehaviour
     public AudioSource audioSource;
     public AudioClip unlockAchievementSound;
     public float fadeAnimationSpeed = 1f;
+
+    public GameObject[] pizzle;
 
     //Constant
     private const string playerPrefsPoints = "POINTS";
@@ -84,6 +87,26 @@ public class AchievementManager : MonoBehaviour
         {
             EarnAchievement("Press O");
         }
+    }
+
+    public void OpenPuzzle() {
+
+        puzzleView.SetActive(true);
+        int level = 0;
+       foreach(Achievement achievement in achievements.Values) {
+        Debug.Log($"{achievement.title}  {achievement.isUnlock}");
+        if(achievement.isUnlock) {
+            level++;
+        }
+       }
+
+       for (int i = 0; i < level; i++)
+       {
+       pizzle[i].gameObject.SetActive(false);
+       }
+       if(level == 10) {
+
+       }
     }
 
     public void OpenCloseAchievement()

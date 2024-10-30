@@ -14,7 +14,7 @@ public class Achievement
     public Sprite icon; // icon or logo of the achievement
     public int points; // total point, or the ammount point when earn this achievement
     public string[] dependency;
-    private bool isUnlock; // default false
+    public bool isUnlock; // default false
 
     private readonly GameObject visualAchievementPref; // Reference GameObject of this achievement
 

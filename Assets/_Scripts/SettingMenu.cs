@@ -44,6 +44,10 @@ public class SettingMenu : MonoBehaviour
         AchievementManager.Instance.OpenCloseAchievement();
     }
 
+     public void OpenClosePuzzlet(){
+        AchievementManager.Instance.OpenPuzzle();
+    }
+
     #region Screen Resolution
     private void SetupScreenResolution()
     {
