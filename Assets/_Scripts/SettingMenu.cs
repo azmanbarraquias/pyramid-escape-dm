@@ -40,6 +40,11 @@ public class SettingMenu : MonoBehaviour
         audioMixer.SetFloat("MainVolume", volume);
     }
 
+    public void Reset(){
+        volumeSlider.value = 0;
+        SetVolume( volumeSlider.value);
+    }
+
     public void OpenCloseAchievement(){
         AchievementManager.Instance.OpenCloseAchievement();
     }
