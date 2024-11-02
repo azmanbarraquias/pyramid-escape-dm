@@ -14,7 +14,7 @@ public class QuestionManager : MonoBehaviour
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI scoreTextAns;
 
-      public GameObject unlockBtn;
+    public GameObject unlockBtn;
 
     [Space]
     // public Image questionImage;
@@ -33,7 +33,7 @@ public class QuestionManager : MonoBehaviour
 
     [Header("FinishGameUI")]
     public GameObject endGamePanel;
-        public GameObject mainGame;
+    public GameObject mainGame;
 
     [Header("Number of Question")]
     public QuestionItem[] questions;
@@ -217,23 +217,29 @@ public class QuestionManager : MonoBehaviour
                 // AchievementManager.Instance.UnlockAchievement(achievementName);
                 result = "PERFECT !!!";
                 nextLevelBtn.SetActive(true);
-                PlayerPrefs.SetInt(PlayerPrefsID.pyLevel, ++Level);
+               if(PlayerPrefs.GetInt(PlayerPrefsID.pyLevel, 1) <= Level)
+                     PlayerPrefs.SetInt(PlayerPrefsID.pyLevel, ++Level);
                 scoreTextAns.text = "Score  " + total.ToString() + " OUT OF " + questions.Length + "\n" + "PASSED";
-                 AchievementManager.Instance.EarnAchievement(unlockTitle);
+                if (AchievementManager.Instance != null)
+                    AchievementManager.Instance.EarnAchievement(unlockTitle);
             }
             else if (total > (questions.Length / 2))
             {
                 result = "GOOD JOB";
                 nextLevelBtn.SetActive(true);
-                PlayerPrefs.SetInt(PlayerPrefsID.pyLevel, ++Level);
-                  scoreTextAns.text = "Score: " + total.ToString() + " OUT OF " + questions.Length + "\n" + "PASSED";
-                   AchievementManager.Instance.EarnAchievement(unlockTitle);
+
+                if(PlayerPrefs.GetInt(PlayerPrefsID.pyLevel, 1) <= Level)
+                     PlayerPrefs.SetInt(PlayerPrefsID.pyLevel, ++Level);
+                scoreTextAns.text = "Score: " + total.ToString() + " OUT OF " + questions.Length + "\n" + "PASSED";
+                if (AchievementManager.Instance != null)
+                    AchievementManager.Instance.EarnAchievement(unlockTitle);
             }
             else
             {
+                FindObjectOfType<AudioManager>().Play("Try");
                 result = "NICE TRY";
                 scoreTextAns.text = "Score " + total.ToString() + " OUT OF " + questions.Length + "\n" + "FAILED";
-                    nextLevelBtn.SetActive(false);
+                nextLevelBtn.SetActive(false);
 
 
             }
@@ -255,19 +261,21 @@ public class QuestionManager : MonoBehaviour
                     GameObject asn = Instantiate(asnwerTemplate, asnQuestion.transform);
                     //  asn.transform.GetComponent<TextMeshProUGUI>().text = $"{answeredQuestionistory[i].answers[j]} = {current.answers[answeredHistory[i]].isCorrectAnswer == true}";
 
-                    asn.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = $"{answeredQuestionistory[i].answers[j].answerText} = {answeredQuestionistory[i].answers[j].isCorrectAnswer}";
+                    asn.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = $"{answeredQuestionistory[i].answers[j].answerText}";
+//                    asn.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = $"{answeredQuestionistory[i].answers[j].answerText} = {answeredQuestionistory[i].answers[j].isCorrectAnswer}";
+
                     if (answeredHistory[i] == j)
                     {
                         asn.transform.GetChild(3).gameObject.SetActive(true);
                         if (current.answers[answeredHistory[i]].isCorrectAnswer)
                         {
                             asn.transform.GetChild(1).gameObject.SetActive(true);
-                             asn.GetComponent<Image>().color = correctColor;
+                            asn.GetComponent<Image>().color = correctColor;
                         }
                         else
                         {
                             asn.transform.GetChild(2).gameObject.SetActive(true);
-                             asn.GetComponent<Image>().color = wrongColor;
+                            asn.GetComponent<Image>().color = wrongColor;
                         }
                     }
 

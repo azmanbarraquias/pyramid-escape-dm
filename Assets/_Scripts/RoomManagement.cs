@@ -13,6 +13,8 @@ public class RoomManagement : MonoBehaviour
 
         for (int i = 0; i < currentLevel; i++)
         {
+            if(currentLevel==11)
+           currentLevel = 10;
             rooms[i].interactable = true;
         }
     }

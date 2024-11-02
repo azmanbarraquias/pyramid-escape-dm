@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -28,8 +28,6 @@ public class SceneLoader : MonoBehaviour
 	private bool startCustomSceneLoader = false;
 	private float startTime = 0;
 	private int sceneIndex;
-
-	public Animator animator;
 
 	#endregion  My Variable's
 
@@ -135,5 +133,9 @@ public class SceneLoader : MonoBehaviour
 		Application.Quit();
 		Debug.Log("QuitGame");
 		//UnityEditor.EditorApplication.isPlaying = false;
+	}
+
+	public void callSound() {
+		FindObjectOfType<AudioManager>().Play("Pop");
 	}
 }

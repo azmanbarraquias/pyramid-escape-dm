@@ -12,9 +12,33 @@ EditorBuildSettings:
     path: Assets/_Scenes/Pyramid Room.unity
     guid: c2b380df95a654b0c93e22a032ec5c45
   - enabled: 1
-    path: Assets/_Scenes/Block_1.unity
-    guid: 41f6fc1c207618e49a4b35a65201e636
-  - enabled: 1
     path: Assets/_Scenes/Block_1 1.unity
-    guid: 44af6988b6fe77a43be0cfae1d93d2fe
+    guid: e5dc166a2c796714cbe361948a336c13
+  - enabled: 1
+    path: Assets/_Scenes/Block_1 2.unity
+    guid: c7c4920d67532d3468fd0668db33fd78
+  - enabled: 1
+    path: Assets/_Scenes/Block_1 3.unity
+    guid: 2407d9b6fc2293246b118f29c4597eb5
+  - enabled: 1
+    path: Assets/_Scenes/Block_1 4.unity
+    guid: 24e3c0d2bfe5a4246bfc2f765c866f5f
+  - enabled: 1
+    path: Assets/_Scenes/Block_1 5.unity
+    guid: 8df30fd16f0aefa41b9e1640c349c740
+  - enabled: 1
+    path: Assets/_Scenes/Block_1 6.unity
+    guid: f1c4aec0c1d5d3349be893a5d77dbb63
+  - enabled: 1
+    path: Assets/_Scenes/Block_1 7.unity
+    guid: cca34aab5777c904aab2d9f6ad9e2e96
+  - enabled: 1
+    path: Assets/_Scenes/Block_1 8.unity
+    guid: ba2268b6c687bd14fb387484c173d9a6
+  - enabled: 1
+    path: Assets/_Scenes/Block_1 9.unity
+    guid: 9310b6bfc58880548b1a87e7823c84dc
+  - enabled: 1
+    path: Assets/_Scenes/Block_1 10.unity
+    guid: d229ac9930e27e949a64e8dd71252d41
   m_configObjects: {}

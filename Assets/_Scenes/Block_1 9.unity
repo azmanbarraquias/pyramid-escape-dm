@@ -336,10 +336,10 @@ RectTransform:
   - {fileID: 1931160569}
   m_Father: {fileID: 213858895}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -22.78946}
-  m_SizeDelta: {x: 275.16, y: 113.3948}
+  m_AnchorMin: {x: 0.29900002, y: 0.43582532}
+  m_AnchorMax: {x: 0.6983359, y: 0.5256506}
+  m_AnchoredPosition: {x: 1, y: 0.21054077}
+  m_SizeDelta: {x: 3.1600037, y: 5.3947983}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &91014838
 Animator:
@@ -414,6 +414,18 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1346171110}
+        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
+        m_MethodName: callSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -500,10 +512,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1088518954}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -5.1915894, y: -12.783813}
-  m_SizeDelta: {x: -243.2995, y: -219.2567}
+  m_AnchorMin: {x: 0.19753285, y: 0.27078182}
+  m_AnchorMax: {x: 0.7945329, y: 0.66873944}
+  m_AnchoredPosition: {x: -2.6915894, y: -1.2838135}
+  m_SizeDelta: {x: 6.2929993, y: 9.743301}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &131734443
 MonoBehaviour:
@@ -553,8 +565,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20
-  m_fontSizeBase: 20
+  m_fontSize: 17.4
+  m_fontSizeBase: 17.4
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1140,8 +1152,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20
-  m_fontSizeBase: 20
+  m_fontSize: 18.66
+  m_fontSizeBase: 18.66
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1459,10 +1471,10 @@ RectTransform:
   - {fileID: 1828047259}
   m_Father: {fileID: 327293420}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000022888, y: -398.10916}
-  m_SizeDelta: {x: 393.5609, y: 97.8665}
+  m_AnchorMin: {x: 0.21780297, y: 0.15010785}
+  m_AnchorMax: {x: 0.77513134, y: 0.21087359}
+  m_AnchoredPosition: {x: 2.0000305, y: -11.609131}
+  m_SizeDelta: {x: 13.560913, y: 24.866516}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &774857346
 MonoBehaviour:
@@ -1527,6 +1539,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1346171110}
+        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
+        m_MethodName: callSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1626,10 +1650,10 @@ RectTransform:
   - {fileID: 1081892135}
   m_Father: {fileID: 213858895}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 117.539474}
-  m_SizeDelta: {x: 275.16, y: 113.3948}
+  m_AnchorMin: {x: 0.29900002, y: 0.5506506}
+  m_AnchorMax: {x: 0.6983359, y: 0.6441265}
+  m_AnchoredPosition: {x: 1, y: 0.039474487}
+  m_SizeDelta: {x: 3.1600037, y: 0.39479828}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &842226486
 Animator:
@@ -1700,6 +1724,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
         m_MethodName: LoadSceneIndexF
         m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1346171110}
+        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
+        m_MethodName: callSound
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2001,8 +2037,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 473.0269}
+  m_AnchoredPosition: {x: 0, y: -116}
+  m_SizeDelta: {x: 0, y: 300}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!222 &926426390
 CanvasRenderer:
@@ -2034,8 +2070,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 5 of 5 \n\n\n You must study much harder!
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: cafe6585bb7140741a61580db5dfc478, type: 2}
+  m_sharedMaterial: {fileID: 2586930947909561470, guid: cafe6585bb7140741a61580db5dfc478, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2059,8 +2095,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 39.2
+  m_fontSizeBase: 39.2
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2133,13 +2169,12 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1420648381}
-  - {fileID: 1383260762}
   m_Father: {fileID: 1699414937}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 4.487, y: -65.28797}
-  m_SizeDelta: {x: -87.549, y: -318.5458}
+  m_AnchorMin: {x: 0.066, y: 0.078}
+  m_AnchorMax: {x: 0.93240154, y: 0.74312645}
+  m_AnchoredPosition: {x: -10, y: -0.42401123}
+  m_SizeDelta: {x: -20, y: -0.8178}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1006395289
 MonoBehaviour:
@@ -2243,8 +2278,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.000022888184}
-  m_SizeDelta: {x: -26.0479, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 100}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1011835596
 MonoBehaviour:
@@ -2321,10 +2356,10 @@ RectTransform:
   - {fileID: 1569879782}
   m_Father: {fileID: 213858895}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -303.2105}
-  m_SizeDelta: {x: 275.16, y: 113.3948}
+  m_AnchorMin: {x: 0.29900002, y: 0.20417473}
+  m_AnchorMax: {x: 0.70420456, y: 0.29412645}
+  m_AnchoredPosition: {x: -0.5, y: -0.21051025}
+  m_SizeDelta: {x: 0.16000366, y: 3.394806}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1042829959
 Animator:
@@ -2394,6 +2429,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1346171109}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
         m_MethodName: Resume
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1346171110}
+        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
+        m_MethodName: callSound
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2981,7 +3028,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -32}
+  m_AnchoredPosition: {x: 0, y: -82.000015}
   m_SizeDelta: {x: 0, y: 380.1846}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1088518955
@@ -3057,10 +3104,10 @@ RectTransform:
   - {fileID: 1496347852}
   m_Father: {fileID: 154499870}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -6.0243, y: 77}
-  m_SizeDelta: {x: 497.8, y: 125.392}
+  m_AnchorMin: {x: 0.132, y: 0.47262967}
+  m_AnchorMax: {x: 0.85353285, y: 0.58155555}
+  m_AnchoredPosition: {x: -1.024292, y: -1.4999084}
+  m_SizeDelta: {x: 5.799988, y: 8.391998}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1121598002
 MonoBehaviour:
@@ -3110,6 +3157,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: QuestionManager, Assembly-CSharp
         m_MethodName: SelectButton
         m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1346171110}
+        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
+        m_MethodName: callSound
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3212,10 +3271,10 @@ RectTransform:
   - {fileID: 2081576730}
   m_Father: {fileID: 327293420}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2.2586, y: -62}
-  m_SizeDelta: {x: 124.4401, y: 113.3948}
+  m_AnchorMin: {x: 0.34153286, y: 0.5}
+  m_AnchorMax: {x: 0.633, y: 0.5918253}
+  m_AnchoredPosition: {x: 0, y: 2.5}
+  m_SizeDelta: {x: 2, y: 2.3947983}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1135823981
 MonoBehaviour:
@@ -3268,7 +3327,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 2
+          m_IntArgument: 10
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -3280,6 +3339,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1346171110}
+        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
+        m_MethodName: callSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -3305,7 +3376,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: f3c222fdfc32b4259866f59012fb3522, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e92475b333ffe4be7bc66d0a8b847072, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3538,8 +3609,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20
-  m_fontSizeBase: 20
+  m_fontSize: 18.66
+  m_fontSizeBase: 18.66
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -3650,8 +3721,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 171.32181, y: 97.6789}
+  m_AnchoredPosition: {x: -0.0847, y: 0}
+  m_SizeDelta: {x: 128.8325, y: 97.6789}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1288947589
 MonoBehaviour:
@@ -3860,10 +3931,10 @@ RectTransform:
   - {fileID: 584881639}
   m_Father: {fileID: 154499870}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -6.0243, y: -173.78}
-  m_SizeDelta: {x: 497.8, y: 125.392}
+  m_AnchorMin: {x: 0.12346717, y: 0.23500001}
+  m_AnchorMax: {x: 0.85353285, y: 0.3498889}
+  m_AnchoredPosition: {x: 1.475708, y: 1.2199707}
+  m_SizeDelta: {x: 0.7999878, y: 1.3919983}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1332583067
 MonoBehaviour:
@@ -3917,6 +3988,18 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1346171110}
+        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
+        m_MethodName: callSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -4045,7 +4128,6 @@ MonoBehaviour:
   progressText: {fileID: 1601246045}
   useCustomLoading: 1
   timer: 5
-  animator: {fileID: 0}
 --- !u!114 &1346171111
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4122,11 +4204,11 @@ MonoBehaviour:
   asnweredHistoryTemplate: {fileID: 2650684833845160764, guid: 5403eb33224f444499bcfafb9eeb18c5, type: 3}
   asnwerTemplate: {fileID: 8275276911461970065, guid: 850f7b86f6bf6a94ca4a46095823eb78, type: 3}
   asnweredHistoryHolder: {fileID: 1011835595}
-  Level: 1
+  Level: 9
   nextLevelBtn: {fileID: 774857344}
   correctColor: {r: 0.83137256, g: 0.92941177, b: 0.85490197, a: 1}
   wrongColor: {r: 0.9764706, g: 0.84313726, b: 0.85490197, a: 1}
-  unlockTitle: Piece 1
+  unlockTitle: Piece 9
 --- !u!1 &1354296181
 GameObject:
   m_ObjectHideFlags: 0
@@ -4162,10 +4244,10 @@ RectTransform:
   - {fileID: 1791716349}
   m_Father: {fileID: 154499870}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -6.0243, y: -48.391968}
-  m_SizeDelta: {x: 497.8, y: 125.392}
+  m_AnchorMin: {x: 0.132, y: 0.3498889}
+  m_AnchorMax: {x: 0.85353285, y: 0.46533337}
+  m_AnchoredPosition: {x: -1.524292, y: 1.6080322}
+  m_SizeDelta: {x: 6.799988, y: 1.3919983}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1354296183
 MonoBehaviour:
@@ -4219,6 +4301,18 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1346171110}
+        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
+        m_MethodName: callSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -4317,10 +4411,10 @@ RectTransform:
   - {fileID: 1288947588}
   m_Father: {fileID: 327293420}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 167.53284, y: -62}
-  m_SizeDelta: {x: 199.2486, y: 113.3948}
+  m_AnchorMin: {x: 0.54413885, y: 0.4008736}
+  m_AnchorMax: {x: 0.836, y: 0.49334946}
+  m_AnchoredPosition: {x: 1.5, y: 2}
+  m_SizeDelta: {x: 1, y: 1.3947983}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1372441196
 MonoBehaviour:
@@ -4390,6 +4484,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1346171110}
+        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
+        m_MethodName: callSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1372441197
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4410,7 +4516,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: f3c222fdfc32b4259866f59012fb3522, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e92475b333ffe4be7bc66d0a8b847072, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4481,12 +4587,12 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 471806429}
-  m_Father: {fileID: 1006395288}
+  m_Father: {fileID: 1699414937}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 20, y: -17}
+  m_AnchoredPosition: {x: -46.074287, y: -312.08963}
+  m_SizeDelta: {x: 20, y: -423.58795}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &1383260763
 MonoBehaviour:
@@ -4531,7 +4637,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1701470535}
   m_HandleRect: {fileID: 1701470534}
   m_Direction: 2
-  m_Value: 0
+  m_Value: 1
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -4749,8 +4855,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20
-  m_fontSizeBase: 20
+  m_fontSize: 18.66
+  m_fontSizeBase: 18.66
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -5304,6 +5410,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1383260762}
   - {fileID: 1006395288}
   - {fileID: 1571940004}
   - {fileID: 594713032}
@@ -5365,15 +5472,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.6742428, b: 0.45148236, a: 1}
+  m_Color: {r: 0.9647059, g: 0.5254902, b: 0.1882353, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 0}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -5742,8 +5849,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20
-  m_fontSizeBase: 20
+  m_fontSize: 18.66
+  m_fontSizeBase: 18.66
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -6258,10 +6365,10 @@ RectTransform:
   - {fileID: 1176269796}
   m_Father: {fileID: 154499870}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -6.0243, y: -299.17}
-  m_SizeDelta: {x: 497.8, y: 125.392}
+  m_AnchorMin: {x: 0.12346717, y: 0.127}
+  m_AnchorMax: {x: 0.86233586, y: 0.46533337}
+  m_AnchoredPosition: {x: -1.024292, y: -128.17004}
+  m_SizeDelta: {x: -6.200012, y: -240.608}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1978266630
 MonoBehaviour:
@@ -6315,6 +6422,18 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1346171110}
+        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
+        m_MethodName: callSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -6488,10 +6607,10 @@ RectTransform:
   - {fileID: 1931682150}
   m_Father: {fileID: 213858895}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.00000023841858, y: -167.7842}
-  m_SizeDelta: {x: 275.16, y: 113.3948}
+  m_AnchorMin: {x: 0.29900002, y: 0.31500003}
+  m_AnchorMax: {x: 0.6983359, y: 0.40800002}
+  m_AnchoredPosition: {x: 1, y: 0.21582031}
+  m_SizeDelta: {x: 3.1600037, y: 1.3947983}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &2013054731
 Animator:
@@ -6565,7 +6684,19 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 2
+          m_IntArgument: 10
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1346171110}
+        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
+        m_MethodName: callSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -6789,10 +6920,10 @@ RectTransform:
   - {fileID: 844687757}
   m_Father: {fileID: 327293420}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0.19880301, y: 0.4008736}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -170.36626, y: -62}
-  m_SizeDelta: {x: 209.567, y: 113.3948}
+  m_AnchoredPosition: {x: -0.5, y: -1.5}
+  m_SizeDelta: {x: -5, y: -5.6052017}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2125282308
 MonoBehaviour:
@@ -6862,6 +6993,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 1346171110}
+        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
+        m_MethodName: callSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &2125282309
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6882,7 +7025,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: f3c222fdfc32b4259866f59012fb3522, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e92475b333ffe4be7bc66d0a8b847072, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -7051,6 +7194,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1346171110}
+        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
+        m_MethodName: callSound
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -7317,8 +7472,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 12.1
-  m_fontSizeBase: 12.1
+  m_fontSize: 30
+  m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -7375,8 +7530,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.79999924}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0.0000019073486}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

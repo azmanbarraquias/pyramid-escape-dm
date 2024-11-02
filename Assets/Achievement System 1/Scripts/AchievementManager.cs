@@ -9,7 +9,7 @@ public class AchievementManager : MonoBehaviour
     #region Variable 
     [Header("Achievement Manager")]
     public GameObject achievementMenu;
-        public GameObject puzzleView;
+    public GameObject puzzleView;
 
     [Header("Achievement Prefabs")]
     public GameObject achievementTemplate;
@@ -26,18 +26,22 @@ public class AchievementManager : MonoBehaviour
 
     [Header("Earning Achievement")]
     public Transform notificationHolder;
-    public AudioSource audioSource;
-    public AudioClip unlockAchievementSound;
+   
     public float fadeAnimationSpeed = 1f;
 
     public GameObject[] pizzle;
+
+    public GameObject completed;
+
+    public TextMeshProUGUI PuzzleTMP;
 
     //Constant
     private const string playerPrefsPoints = "POINTS";
 
     public Dictionary<string, Achievement> achievements = new Dictionary<string, Achievement>();
 
-    [Header("Create Achievement")] [Tooltip("Enter number achievement you want to add")]
+    [Header("Create Achievement")]
+    [Tooltip("Enter number achievement you want to add")]
     public Achievement[] achievement;
 
     #endregion Variable
@@ -89,24 +93,34 @@ public class AchievementManager : MonoBehaviour
         }
     }
 
-    public void OpenPuzzle() {
+    public void OpenPuzzle()
+    {
 
         puzzleView.SetActive(true);
         int level = 0;
-       foreach(Achievement achievement in achievements.Values) {
-        Debug.Log($"{achievement.title}  {achievement.isUnlock}");
-        if(achievement.isUnlock) {
-            level++;
+        foreach (Achievement achievement in achievements.Values)
+        {
+            Debug.Log($"{achievement.title}  {achievement.isUnlock}");
+            if (achievement.isUnlock)
+            {
+                level++;
+            }
         }
-       }
+           Debug.Log($"{level}");
+        foreach (Achievement achievement in achievements.Values)
 
-       for (int i = 0; i < level; i++)
-       {
-       pizzle[i].gameObject.SetActive(false);
-       }
-       if(level == 10) {
-
-       }
+        for (int i = 0; i < level; i++)
+        {
+            pizzle[i].gameObject.SetActive(false);
+        }
+        if (level == 10)
+        {
+            PuzzleTMP.text = "Cograts, You Completed all the piece.";
+            FindObjectOfType<AudioManager>().Play("Collect");
+            completed.SetActive(true);
+        }else {
+             completed.SetActive(false);
+        }
     }
 
     public void OpenCloseAchievement()
@@ -216,7 +230,7 @@ public class AchievementManager : MonoBehaviour
     {
         if (achievements[title].UnlockAchievement() == true)
         {
-            audioSource.PlayOneShot(unlockAchievementSound);
+           callSoundCollect();
 
             GameObject newEarnAchievement = Instantiate(earnAchievementTemplate);
 
@@ -314,6 +328,15 @@ public class AchievementManager : MonoBehaviour
             return generalList.transform;
         }
     }
+
+    public void callSound() {
+		FindObjectOfType<AudioManager>().Play("Pop");
+	}
+
+    public void callSoundCollect() {
+		FindObjectOfType<AudioManager>().Play("Collect");
+	}
+    
 }
 
 // Just add
