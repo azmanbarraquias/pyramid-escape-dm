@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using TMPro;
+using System.Collections.Generic;
 
 public class GameControl : MonoBehaviour
 {
@@ -9,6 +10,56 @@ public class GameControl : MonoBehaviour
 
     public AudioSource audioSource;
     public AudioClip aClip;
+
+    public GameObject[] puzzles;
+
+    private List<GameObject> puzzleDone = new List<GameObject>();
+
+
+    public GameObject finishPuzzle;
+
+
+    private static GameControl instance;
+    public static GameControl Instance
+    {
+        get
+        {
+            if (instance == null)
+            {
+                instance = FindObjectOfType<GameControl>();
+            }
+            return instance;
+        }
+    }
+
+	
+	 private void Start()
+    {
+		foreach (GameObject puzzle in puzzles)
+        {
+            puzzleDone.Add(puzzle);
+        }
+        randomPuzzle();
+	}
+
+	
+    public void randomPuzzle()
+    {
+        if(puzzleDone.Count == 0)
+        {
+            
+            finishPuzzle.gameObject.SetActive(true);
+        return;
+
+        }
+        int index = Random.Range(0, puzzleDone.Count - 1);
+        puzzleDone[index].SetActive(true);
+        Debug.Log(index);
+        puzzleDone.RemoveAt(index);
+    }
+
+
+
 
     // Update is called once per frame
     void Update()
@@ -20,6 +71,10 @@ public class GameControl : MonoBehaviour
 			starEffect.SetActive(true);
 			ExitDAD();
 		}
+
+        if(Input.GetKeyDown(KeyCode.Space)) {
+        randomPuzzle();
+        }
     }
 
 	public void ExitDAD()

@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 public class DragAndDrop : MonoBehaviour
 {
@@ -19,12 +20,13 @@ public class DragAndDrop : MonoBehaviour
     public GameObject effects;
 
     public GameControl gameControl;
-
     private void Start()
     {
         initialPosition = transform.position;
         placementSprite = placement.GetComponent<SpriteRenderer>();
+      
     }
+
 
     private void Update()
     {
@@ -56,11 +58,13 @@ public class DragAndDrop : MonoBehaviour
                     if (Mathf.Abs(transform.position.x - placement.position.x) <= 0.5f &&
                         Mathf.Abs(transform.position.y - placement.position.y) <= 0.5f)
                     {
+                        GameControl.Instance.randomPuzzle();
                         transform.position = new Vector2(placement.position.x, placement.position.y);
                         locked = true;
                         placementSprite.color = colorSetting;
                         effects.SetActive(true);
                         gameControl.PlayCorrectPlaceSound();
+                      
                         i++;
                     }
                     else
