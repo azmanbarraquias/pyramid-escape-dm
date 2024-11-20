@@ -2,10 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class RoomManagement : MonoBehaviour
 {
     public Button[] rooms;
+
+    public Button pyramidBtn;
+
+    public TextMeshProUGUI PuzzleTMP;
+
 
     void Start()
     {
@@ -16,6 +22,10 @@ public class RoomManagement : MonoBehaviour
             if(currentLevel==11)
            currentLevel = 10;
             rooms[i].interactable = true;
+        }
+        if(currentLevel == 10) {
+            pyramidBtn.interactable = true;
+            PuzzleTMP.text = "Now Finish the puzzle!";
         }
     }
 

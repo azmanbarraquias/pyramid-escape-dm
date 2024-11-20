@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class DragAndDrop : MonoBehaviour
@@ -84,7 +84,7 @@ public class DragAndDrop : MonoBehaviour
         placementSprite.color = colorSetting;
         effects.SetActive(true);
         gameControl.PlayCorrectPlaceSound();
-        
+
     }
 
     private void ResetToInitialPosition()
