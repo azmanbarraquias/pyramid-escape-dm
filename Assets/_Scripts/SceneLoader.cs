@@ -14,7 +14,7 @@ public class SceneLoader : MonoBehaviour
 
 	public GameObject menuScreen;
 
-	public GameObject menuScree111n;
+	public GameObject speakButton;
 
 	public Slider loadingBar;
 
@@ -96,14 +96,15 @@ public class SceneLoader : MonoBehaviour
 			}
 		}
 
-		if (FindObjectOfType<AudioManager>().GetSound("try1").source.isPlaying)
+		if (FindObjectOfType<AudioManager>().GetSound("Speak").source.isPlaying)
 		{
-			menuScree111n.gameObject.SetActive(true);
+			speakButton.gameObject.SetActive(true);
 		}
 		else
 		{
-			menuScree111n.gameObject.SetActive(false);
+			speakButton.gameObject.SetActive(false);
 		}
+
 	}
 
 	private IEnumerator LoadAsynchronously(int _sceneIndex)
@@ -153,14 +154,14 @@ public class SceneLoader : MonoBehaviour
 	}
 
 
-	public void callSound1(AudioClip audioClip)
+	public void SpeakPlay(AudioClip audioClip)
 	{
-		FindObjectOfType<AudioManager>().PlayReadSound("try1", audioClip);
+		FindObjectOfType<AudioManager>().PlayReadSound("Speak", audioClip);
 	}
 
-	public void callSounSotpd1()
+	public void StopSpeak()
 	{
-		FindObjectOfType<AudioManager>().StopPlay("try1");
+		FindObjectOfType<AudioManager>().StopPlay("Speak");
 	}
 
 

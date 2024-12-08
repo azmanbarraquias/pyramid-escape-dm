@@ -84,7 +84,6 @@ public class AudioManager : MonoBehaviour
     public void PlayReadSound(string soundTitle, AudioClip clip)
     {
         Sound sound = Array.Find(sounds, s => s.title == soundTitle);
-
         sound.source.clip = clip;
         sound.source.Play();
     }
@@ -92,7 +91,6 @@ public class AudioManager : MonoBehaviour
     public void StopPlay(string soundTitle)
     {
         Sound sound = Array.Find(sounds, s => s.title == soundTitle);
-
         sound.source.Stop();
     }
 
