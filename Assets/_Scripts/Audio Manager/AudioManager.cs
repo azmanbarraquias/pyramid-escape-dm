@@ -18,12 +18,12 @@ public class AudioManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
 
         if (instance == null)
-        { 
+        {
             instance = this;
         }
         else
-        { 
-            Destroy(gameObject); 
+        {
+            Destroy(gameObject);
         }
 
         foreach (Sound sound in sounds)
@@ -80,4 +80,21 @@ public class AudioManager : MonoBehaviour
 
         return sound;
     }
+
+    public void PlayReadSound(string soundTitle, AudioClip clip)
+    {
+        Sound sound = Array.Find(sounds, s => s.title == soundTitle);
+
+        sound.source.clip = clip;
+        sound.source.Play();
+    }
+
+    public void StopPlay(string soundTitle)
+    {
+        Sound sound = Array.Find(sounds, s => s.title == soundTitle);
+
+        sound.source.Stop();
+    }
+
+
 }

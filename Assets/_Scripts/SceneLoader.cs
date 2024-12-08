@@ -14,6 +14,8 @@ public class SceneLoader : MonoBehaviour
 
 	public GameObject menuScreen;
 
+	public GameObject menuScree111n;
+
 	public Slider loadingBar;
 
 	public TextMeshProUGUI progressText;
@@ -38,13 +40,14 @@ public class SceneLoader : MonoBehaviour
 
 	public void LoadSceneIndexF(int sceneIndex)
 	{
-		  SceneManager.LoadScene(sceneIndex);
+		SceneManager.LoadScene(sceneIndex);
 	}
-	
-	public void ResetAchievement(){
+
+	public void ResetAchievement()
+	{
 		AchievementManager.Instance.ResetAchievement();
 	}
-	
+
 	public void LoadSceneIndex(int sceneIndex)
 	{
 		menuScreen.SetActive(false); // Set Menu Panel Active = false
@@ -92,6 +95,15 @@ public class SceneLoader : MonoBehaviour
 				SceneManager.LoadScene(sceneIndex);
 			}
 		}
+
+		if (FindObjectOfType<AudioManager>().GetSound("try1").source.isPlaying)
+		{
+			menuScree111n.gameObject.SetActive(true);
+		}
+		else
+		{
+			menuScree111n.gameObject.SetActive(false);
+		}
 	}
 
 	private IEnumerator LoadAsynchronously(int _sceneIndex)
@@ -135,7 +147,21 @@ public class SceneLoader : MonoBehaviour
 		//UnityEditor.EditorApplication.isPlaying = false;
 	}
 
-	public void callSound() {
+	public void callSound()
+	{
 		FindObjectOfType<AudioManager>().Play("Pop");
 	}
+
+
+	public void callSound1(AudioClip audioClip)
+	{
+		FindObjectOfType<AudioManager>().PlayReadSound("try1", audioClip);
+	}
+
+	public void callSounSotpd1()
+	{
+		FindObjectOfType<AudioManager>().StopPlay("try1");
+	}
+
+
 }
