@@ -95,7 +95,8 @@ public class SceneLoader : MonoBehaviour
 				SceneManager.LoadScene(sceneIndex);
 			}
 		}
-
+		if(speakButton != null)
+		{
 		if (FindObjectOfType<AudioManager>().GetSound("Speak").source.isPlaying)
 		{
 			speakButton.gameObject.SetActive(true);
@@ -103,6 +104,7 @@ public class SceneLoader : MonoBehaviour
 		else
 		{
 			speakButton.gameObject.SetActive(false);
+		}
 		}
 
 	}

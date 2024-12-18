@@ -47,8 +47,10 @@ public class GameControl : MonoBehaviour
     {
         if(puzzleDone.Count == 0)
         {
-            
+             FindObjectOfType<AudioManager>().Play("Collect");
             finishPuzzle.gameObject.SetActive(true);
+              if (AchievementManager.Instance != null)
+                    AchievementManager.Instance.EarnAchievement("Puzzle");
         return;
 
         }

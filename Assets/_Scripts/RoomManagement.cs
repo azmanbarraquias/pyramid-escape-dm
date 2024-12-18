@@ -20,11 +20,16 @@ public class RoomManagement : MonoBehaviour
         for (int i = 0; i < currentLevel; i++)
         {
             if(currentLevel==11)
+            {
+            pyramidBtn.interactable = true;
            currentLevel = 10;
+
+
+            }
+
             rooms[i].interactable = true;
         }
         if(currentLevel == 10) {
-            pyramidBtn.interactable = true;
             PuzzleTMP.text = "Now Finish the puzzle!";
         }
     }
