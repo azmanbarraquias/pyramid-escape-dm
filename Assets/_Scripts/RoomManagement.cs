@@ -12,10 +12,13 @@ public class RoomManagement : MonoBehaviour
 
     public TextMeshProUGUI PuzzleTMP;
 
+        public TextMeshProUGUI PuzzleTMPScore;
+
 
     void Start()
     {
        int currentLevel =  PlayerPrefs.GetInt(PlayerPrefsID.pyLevel, 1);
+
 
         for (int i = 0; i < currentLevel; i++)
         {
@@ -26,6 +29,9 @@ public class RoomManagement : MonoBehaviour
 
 
             }
+
+         PuzzleTMPScore.text = "Room Unlock\n"+currentLevel + " / 10";
+
 
             rooms[i].interactable = true;
         }
